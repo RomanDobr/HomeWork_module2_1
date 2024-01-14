@@ -52,6 +52,12 @@ public class Stock {
         return item;
     }
 
+    public Item getItem(int index) {
+        Item item = items.get(index - 1);
+        items.remove(index - 1);
+        return item;
+    }
+
     public void clearItemsExceptTheLastOne() {
         for (int i = 0; i <= items.size(); i++) {
             items.remove(0);
