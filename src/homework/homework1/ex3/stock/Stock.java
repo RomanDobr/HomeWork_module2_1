@@ -59,9 +59,9 @@ public class Stock {
     }
 
     public void clearItemsExceptTheLastOne() {
-        for (int i = 0; i <= items.size(); i++) {
-            items.remove(0);
-        }
+        Item item = items.get(items.size() - 1);
+        items.clear();
+        items.add(item);
     }
 
     public ArrayList<Item> getItems() {
